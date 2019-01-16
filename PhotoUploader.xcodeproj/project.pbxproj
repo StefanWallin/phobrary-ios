@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F618947E21D9F4D80022E28D /* PhobraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618947D21D9F4D80022E28D /* PhobraryService.swift */; };
+		F618948021D9F9DC0022E28D /* PhobraryServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618947F21D9F9DC0022E28D /* PhobraryServiceClient.swift */; };
 		F6FAB58C21D4C4F9005190EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB58B21D4C4F9005190EA /* AppDelegate.swift */; };
-		F6FAB58E21D4C4F9005190EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB58D21D4C4F9005190EA /* ViewController.swift */; };
+		F6FAB58E21D4C4F9005190EA /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB58D21D4C4F9005190EA /* ConnectionViewController.swift */; };
 		F6FAB59121D4C4F9005190EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FAB58F21D4C4F9005190EA /* Main.storyboard */; };
 		F6FAB59321D4C4FB005190EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FAB59221D4C4FB005190EA /* Assets.xcassets */; };
 		F6FAB59621D4C4FB005190EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FAB59421D4C4FB005190EA /* LaunchScreen.storyboard */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F618947D21D9F4D80022E28D /* PhobraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhobraryService.swift; sourceTree = "<group>"; };
+		F618947F21D9F9DC0022E28D /* PhobraryServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhobraryServiceClient.swift; sourceTree = "<group>"; };
 		F6FAB58821D4C4F9005190EA /* PhotoUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FAB58B21D4C4F9005190EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6FAB58D21D4C4F9005190EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6FAB58D21D4C4F9005190EA /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		F6FAB59021D4C4F9005190EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6FAB59221D4C4FB005190EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6FAB59521D4C4FB005190EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F618947B21D9E7C00022E28D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6FAB58D21D4C4F9005190EA /* ConnectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F618947C21D9F4AE0022E28D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F618947D21D9F4D80022E28D /* PhobraryService.swift */,
+				F618947F21D9F9DC0022E28D /* PhobraryServiceClient.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		F6FAB57F21D4C4F9005190EA = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +118,9 @@
 		F6FAB58A21D4C4F9005190EA /* PhotoUploader */ = {
 			isa = PBXGroup;
 			children = (
+				F618947C21D9F4AE0022E28D /* lib */,
 				F6FAB58B21D4C4F9005190EA /* AppDelegate.swift */,
-				F6FAB58D21D4C4F9005190EA /* ViewController.swift */,
+				F618947B21D9E7C00022E28D /* ViewControllers */,
 				F6FAB58F21D4C4F9005190EA /* Main.storyboard */,
 				F6FAB59221D4C4FB005190EA /* Assets.xcassets */,
 				F6FAB59421D4C4FB005190EA /* LaunchScreen.storyboard */,
@@ -256,8 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6FAB58E21D4C4F9005190EA /* ViewController.swift in Sources */,
+				F6FAB58E21D4C4F9005190EA /* ConnectionViewController.swift in Sources */,
+				F618948021D9F9DC0022E28D /* PhobraryServiceClient.swift in Sources */,
 				F6FAB58C21D4C4F9005190EA /* AppDelegate.swift in Sources */,
+				F618947E21D9F4D80022E28D /* PhobraryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hln-Qy-p3J">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Phobrary Photo Uploader-->
+        <scene sceneID="eM8-6B-FqI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="jlP-4M-pok" customClass="ConnectionViewController" customModule="PhotoUploader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WcG-52-SnW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="rag-9Q-SAM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dT6-bf-7A5">
+                                <rect key="frame" x="20" y="84" width="280" height="335.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter server adress:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iy9-uy-UsU">
+                                        <rect key="frame" x="61" y="20" width="158.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.52830655809859151" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="http://localhost:3000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHH-oM-4JS">
+                                        <rect key="frame" x="20" y="54.5" width="240" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" textContentType="url"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter access token:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bw-IM-jQp">
+                                        <rect key="frame" x="63" y="119.5" width="154.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.52830655810000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Npk-qq-sac">
+                                        <rect key="frame" x="20" y="154.5" width="240" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxA-3N-CFK">
+                                        <rect key="frame" x="30" y="271.5" width="220" height="34"/>
+                                        <color key="backgroundColor" red="0.39881044630000001" green="0.70803856850000002" blue="0.84597265720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="titleShadowOffset" width="0.0" height="1"/>
+                                        <state key="normal" title="Connect &amp; Save">
+                                            <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnConnectAndSave:" destination="jlP-4M-pok" eventType="touchUpInside" id="oel-Xp-yKy"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="connectionLabel" text="connectionLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-iy-Who">
+                                        <rect key="frame" x="76.5" y="217.5" width="127" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12151878238341973" green="0.12151878238341973" blue="0.12151878238341973" alpha="0.83255391725352124" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Npk-qq-sac" firstAttribute="top" secondItem="7bw-IM-jQp" secondAttribute="bottom" constant="10" id="5WY-Eu-FhV"/>
+                                    <constraint firstAttribute="trailing" secondItem="YxA-3N-CFK" secondAttribute="trailing" constant="30" id="6ba-yw-FMV"/>
+                                    <constraint firstItem="CHH-oM-4JS" firstAttribute="leading" secondItem="dT6-bf-7A5" secondAttribute="leading" constant="20" id="6wa-do-0bT"/>
+                                    <constraint firstItem="YxA-3N-CFK" firstAttribute="top" secondItem="4VJ-iy-Who" secondAttribute="bottom" constant="33" id="CQ1-Ac-WXz"/>
+                                    <constraint firstItem="YxA-3N-CFK" firstAttribute="centerX" secondItem="dT6-bf-7A5" secondAttribute="centerX" id="CdT-0x-v3y"/>
+                                    <constraint firstItem="7bw-IM-jQp" firstAttribute="centerX" secondItem="dT6-bf-7A5" secondAttribute="centerX" id="E9A-Kt-HCN"/>
+                                    <constraint firstItem="CHH-oM-4JS" firstAttribute="top" secondItem="Iy9-uy-UsU" secondAttribute="bottom" constant="10" id="JyM-tF-UPA"/>
+                                    <constraint firstItem="4VJ-iy-Who" firstAttribute="centerX" secondItem="dT6-bf-7A5" secondAttribute="centerX" id="Qxf-ZT-XpI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Npk-qq-sac" secondAttribute="trailing" constant="20" id="RMB-vA-aST"/>
+                                    <constraint firstItem="4VJ-iy-Who" firstAttribute="top" secondItem="Npk-qq-sac" secondAttribute="bottom" constant="33" id="UEi-vN-Inq"/>
+                                    <constraint firstItem="Npk-qq-sac" firstAttribute="leading" secondItem="dT6-bf-7A5" secondAttribute="leading" constant="20" id="YHW-Pe-4F5"/>
+                                    <constraint firstItem="Iy9-uy-UsU" firstAttribute="top" secondItem="dT6-bf-7A5" secondAttribute="top" constant="20" id="kJ1-9h-NO3"/>
+                                    <constraint firstAttribute="trailing" secondItem="CHH-oM-4JS" secondAttribute="trailing" constant="20" id="oHb-HJ-YkF"/>
+                                    <constraint firstItem="Iy9-uy-UsU" firstAttribute="centerX" secondItem="dT6-bf-7A5" secondAttribute="centerX" id="qBR-dx-UzA"/>
+                                    <constraint firstAttribute="bottom" secondItem="YxA-3N-CFK" secondAttribute="bottom" constant="30" id="tVB-75-yB4"/>
+                                    <constraint firstItem="7bw-IM-jQp" firstAttribute="top" secondItem="CHH-oM-4JS" secondAttribute="bottom" constant="35" id="vaB-38-0vK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rag-9Q-SAM" firstAttribute="leading" secondItem="WcG-52-SnW" secondAttribute="leading" id="4Nn-mt-aMU"/>
+                            <constraint firstItem="dT6-bf-7A5" firstAttribute="top" secondItem="2xr-Ad-WRB" secondAttribute="top" constant="20" id="BBI-hW-359"/>
+                            <constraint firstItem="2xr-Ad-WRB" firstAttribute="trailing" secondItem="dT6-bf-7A5" secondAttribute="trailing" constant="20" id="BPr-n2-2nJ"/>
+                            <constraint firstAttribute="bottom" secondItem="rag-9Q-SAM" secondAttribute="bottom" id="G6u-O3-m5B"/>
+                            <constraint firstItem="dT6-bf-7A5" firstAttribute="leading" secondItem="2xr-Ad-WRB" secondAttribute="leading" constant="20" id="QEg-Va-4m9"/>
+                            <constraint firstItem="rag-9Q-SAM" firstAttribute="top" secondItem="WcG-52-SnW" secondAttribute="top" id="QSW-Kh-Hpa"/>
+                            <constraint firstAttribute="trailing" secondItem="rag-9Q-SAM" secondAttribute="trailing" id="Wew-kf-P6v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2xr-Ad-WRB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Phobrary Photo Uploader" id="K3y-Bn-cwa" userLabel="I"/>
+                    <connections>
+                        <outlet property="connectionLabel" destination="4VJ-iy-Who" id="oMW-3B-DGG"/>
+                        <outlet property="serverAdressTextField" destination="CHH-oM-4JS" id="MpI-bB-DOF"/>
+                        <outlet property="serverTokenTextField" destination="Npk-qq-sac" id="76U-wB-AsN"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OdY-en-TMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="662" y="165"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1fo-Sl-Q2y">
+            <objects>
+                <navigationController id="hln-Qy-p3J" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="dqZ-CB-ucx">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jlP-4M-pok" kind="relationship" relationship="rootViewController" id="zo6-1G-VZg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nal-mH-Xz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327" y="165"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackgroundImage" width="5472" height="3648"/>
+    </resources>
 </document>
