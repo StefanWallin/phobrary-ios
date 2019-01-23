@@ -11,34 +11,34 @@ import UIKit
 class PhobraryServiceClient: NSObject {
     let baseURL: URL!
     let token: String
-    
+
     enum Methods: String {
         case get = "GET"
         case post = "POST"
         case put = "PUT"
         case delete = "DELETE"
     }
-    
+
     init(baseURL: URL, token: String) {
         self.baseURL = baseURL
         self.token = token
     }
 
-    func createSession (onSuccess success: @escaping () -> Void, onFailure failure: @escaping () -> Void) {
+    func createSession (onSuccess success: @escaping (Int) -> Void, onFailure failure: @escaping (Int) -> Void) {
         let body: String = "{\"token\": \"\(self.token)\" }"
-        request(path: "/api/v1/sessions", body: body, method: .post, onSuccess: { data, response, error in
-            success()
-        }, onFailure: { data, response, error in
-            failure()
+        request(path: "/api/v1/sessions", body: body, method: .post, onSuccess: { statusCode, data, response, error in
+            success(statusCode)
+        }, onFailure: { statusCode, data, response, error in
+            failure(statusCode)
         })
     }
-    
+
     func request(
         path: String,
         body: String = "",
         method: Methods = .get,
-        onSuccess success: @escaping (Data?, URLResponse?, Error?) -> Void,
-        onFailure failure: @escaping (Data?, URLResponse?, Error?) -> Void
+        onSuccess success: @escaping (Int, Data?, URLResponse?, Error?) -> Void,
+        onFailure failure: @escaping (Int, Data?, URLResponse?, Error?) -> Void
         ) {
         let session = URLSession(configuration: .ephemeral)
         let url: URL = URL(string: path, relativeTo: baseURL)!
@@ -47,18 +47,25 @@ class PhobraryServiceClient: NSObject {
         request.httpMethod = method.rawValue
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.httpBody = body.data(using: .utf8);
-        
+
         let taskWithRequest = session.dataTask(with: request) { data, response, error in
             guard
                 data != nil,
-                let urlresponse = response as? HTTPURLResponse,
-                200 ... 299 ~= urlresponse.statusCode else {
+                let urlresponse = response as? HTTPURLResponse else
+            {
+                failure(408, data, response, error)
                 print("No data or invalid statusCode")
-                failure(data, response, error)
                 return
             }
-            success(data, response, error)
-            return
+            let statusCode = urlresponse.statusCode
+            guard
+                200 ... 299 ~= statusCode else
+            {
+                failure(statusCode, data, response, error)
+                print("Invalid statusCode")
+                return
+            }
+            success(urlresponse.statusCode, data, response, error)
         }
         taskWithRequest.resume()
     }

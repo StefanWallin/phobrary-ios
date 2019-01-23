@@ -14,7 +14,7 @@ class PhobraryService: NSObject {
         phobraryClient = PhobraryServiceClient(baseURL: URL(string: serverAdress)!, token: serverToken)
     }
     
-    func login(onSuccess success: @escaping () -> Void, onFailure failure: @escaping () -> Void) {
+    func login(onSuccess success: @escaping (Int) -> Void, onFailure failure: @escaping (Int) -> Void) {
         phobraryClient.createSession(onSuccess: success, onFailure: failure)
     }
 }

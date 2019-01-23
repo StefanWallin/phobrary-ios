@@ -27,10 +27,10 @@ class ConnectionViewController: UIViewController {
         DispatchQueue.main.async { self.connectionLabel.text = "Connecting..." }
         connectionLabel.isHidden = !connectionLabel.isHidden
         let service = PhobraryService(serverAdress: adress, serverToken: token)
-        service.login(onSuccess: {
-            DispatchQueue.main.async { self.connectionLabel.text = "Success" }
-        }, onFailure: {
-            DispatchQueue.main.async { self.connectionLabel.text = "Failure" }
+        service.login(onSuccess: {(statusCode: Int) in
+            DispatchQueue.main.async { self.connectionLabel.text = "Success \(statusCode)" }
+        }, onFailure: {(statusCode: Int) in
+            DispatchQueue.main.async { self.connectionLabel.text = "Failure \(statusCode)" }
         })
     }
 }
