@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		F618947E21D9F4D80022E28D /* PhobraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618947D21D9F4D80022E28D /* PhobraryService.swift */; };
 		F618948021D9F9DC0022E28D /* PhobraryServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F618947F21D9F9DC0022E28D /* PhobraryServiceClient.swift */; };
+		F66A40142218242900D6B6C5 /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66A40132218242900D6B6C5 /* SwiftKeychainWrapper.framework */; };
+		F66A40172218315A00D6B6C5 /* RouteSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A40162218315A00D6B6C5 /* RouteSwitcher.swift */; };
+		F66A4039221DE3B900D6B6C5 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A4038221DE3B900D6B6C5 /* LoadingViewController.swift */; };
+		F6A700F022023D4100F5E88E /* UploadPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A700EF22023D4100F5E88E /* UploadPhotosViewController.swift */; };
+		F6B764BE220D86FE00033C29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B764BD220D86FE00033C29 /* Images.xcassets */; };
+		F6B764C6220D97FE00033C29 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B764C5220D97FE00033C29 /* WelcomeViewController.swift */; };
+		F6B764C9220DB10900033C29 /* UIModifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B764C8220DB10900033C29 /* UIModifications.swift */; };
+		F6CEEC2A22175C3F00844FB6 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEC2922175C3F00844FB6 /* PrimaryButton.swift */; };
+		F6CEEC2C221769B400844FB6 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEC2B221769B400844FB6 /* TextField.swift */; };
 		F6FAB58C21D4C4F9005190EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB58B21D4C4F9005190EA /* AppDelegate.swift */; };
 		F6FAB58E21D4C4F9005190EA /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB58D21D4C4F9005190EA /* ConnectionViewController.swift */; };
 		F6FAB59121D4C4F9005190EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FAB58F21D4C4F9005190EA /* Main.storyboard */; };
-		F6FAB59321D4C4FB005190EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FAB59221D4C4FB005190EA /* Assets.xcassets */; };
-		F6FAB59621D4C4FB005190EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FAB59421D4C4FB005190EA /* LaunchScreen.storyboard */; };
 		F6FAB5A121D4C4FB005190EA /* PhotoUploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB5A021D4C4FB005190EA /* PhotoUploaderTests.swift */; };
 		F6FAB5AC21D4C4FB005190EA /* PhotoUploaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FAB5AB21D4C4FB005190EA /* PhotoUploaderUITests.swift */; };
 /* End PBXBuildFile section */
@@ -38,12 +45,19 @@
 /* Begin PBXFileReference section */
 		F618947D21D9F4D80022E28D /* PhobraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhobraryService.swift; sourceTree = "<group>"; };
 		F618947F21D9F9DC0022E28D /* PhobraryServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhobraryServiceClient.swift; sourceTree = "<group>"; };
+		F66A40132218242900D6B6C5 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftKeychainWrapper.framework; path = Carthage/Build/iOS/SwiftKeychainWrapper.framework; sourceTree = "<group>"; };
+		F66A40162218315A00D6B6C5 /* RouteSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSwitcher.swift; sourceTree = "<group>"; };
+		F66A4038221DE3B900D6B6C5 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F6A700EF22023D4100F5E88E /* UploadPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotosViewController.swift; sourceTree = "<group>"; };
+		F6B764BD220D86FE00033C29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6B764C5220D97FE00033C29 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F6B764C8220DB10900033C29 /* UIModifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModifications.swift; sourceTree = "<group>"; };
+		F6CEEC2922175C3F00844FB6 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		F6CEEC2B221769B400844FB6 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		F6FAB58821D4C4F9005190EA /* PhotoUploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoUploader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FAB58B21D4C4F9005190EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6FAB58D21D4C4F9005190EA /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		F6FAB59021D4C4F9005190EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F6FAB59221D4C4FB005190EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F6FAB59521D4C4FB005190EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6FAB59721D4C4FB005190EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6FAB59C21D4C4FB005190EA /* PhotoUploaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoUploaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FAB5A021D4C4FB005190EA /* PhotoUploaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploaderTests.swift; sourceTree = "<group>"; };
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66A40142218242900D6B6C5 /* SwiftKeychainWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				F6FAB58D21D4C4F9005190EA /* ConnectionViewController.swift */,
+				F66A4038221DE3B900D6B6C5 /* LoadingViewController.swift */,
+				F6A700EF22023D4100F5E88E /* UploadPhotosViewController.swift */,
+				F6B764C5220D97FE00033C29 /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -91,8 +109,27 @@
 			children = (
 				F618947D21D9F4D80022E28D /* PhobraryService.swift */,
 				F618947F21D9F9DC0022E28D /* PhobraryServiceClient.swift */,
+				F66A40162218315A00D6B6C5 /* RouteSwitcher.swift */,
+				F6B764C8220DB10900033C29 /* UIModifications.swift */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		F66A40122218242900D6B6C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F66A40132218242900D6B6C5 /* SwiftKeychainWrapper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6CEEC2822175C1600844FB6 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				F6CEEC2B221769B400844FB6 /* TextField.swift */,
+				F6CEEC2922175C3F00844FB6 /* PrimaryButton.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		F6FAB57F21D4C4F9005190EA = {
@@ -102,6 +139,7 @@
 				F6FAB59F21D4C4FB005190EA /* PhotoUploaderTests */,
 				F6FAB5AA21D4C4FB005190EA /* PhotoUploaderUITests */,
 				F6FAB58921D4C4F9005190EA /* Products */,
+				F66A40122218242900D6B6C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,13 +156,13 @@
 		F6FAB58A21D4C4F9005190EA /* PhotoUploader */ = {
 			isa = PBXGroup;
 			children = (
+				F6CEEC2822175C1600844FB6 /* components */,
 				F618947C21D9F4AE0022E28D /* lib */,
 				F6FAB58B21D4C4F9005190EA /* AppDelegate.swift */,
 				F618947B21D9E7C00022E28D /* ViewControllers */,
 				F6FAB58F21D4C4F9005190EA /* Main.storyboard */,
-				F6FAB59221D4C4FB005190EA /* Assets.xcassets */,
-				F6FAB59421D4C4FB005190EA /* LaunchScreen.storyboard */,
 				F6FAB59721D4C4FB005190EA /* Info.plist */,
+				F6B764BD220D86FE00033C29 /* Images.xcassets */,
 			);
 			path = PhotoUploader;
 			sourceTree = "<group>";
@@ -157,6 +195,7 @@
 				F6FAB58421D4C4F9005190EA /* Sources */,
 				F6FAB58521D4C4F9005190EA /* Frameworks */,
 				F6FAB58621D4C4F9005190EA /* Resources */,
+				F66A40152218244600D6B6C5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,8 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6FAB59621D4C4FB005190EA /* LaunchScreen.storyboard in Resources */,
-				F6FAB59321D4C4FB005190EA /* Assets.xcassets in Resources */,
+				F6B764BE220D86FE00033C29 /* Images.xcassets in Resources */,
 				F6FAB59121D4C4F9005190EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,15 +311,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F66A40152218244600D6B6C5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftKeychainWrapper.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F6FAB58421D4C4F9005190EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A700F022023D4100F5E88E /* UploadPhotosViewController.swift in Sources */,
 				F6FAB58E21D4C4F9005190EA /* ConnectionViewController.swift in Sources */,
+				F6B764C9220DB10900033C29 /* UIModifications.swift in Sources */,
 				F618948021D9F9DC0022E28D /* PhobraryServiceClient.swift in Sources */,
+				F6CEEC2C221769B400844FB6 /* TextField.swift in Sources */,
 				F6FAB58C21D4C4F9005190EA /* AppDelegate.swift in Sources */,
+				F66A40172218315A00D6B6C5 /* RouteSwitcher.swift in Sources */,
 				F618947E21D9F4D80022E28D /* PhobraryService.swift in Sources */,
+				F66A4039221DE3B900D6B6C5 /* LoadingViewController.swift in Sources */,
+				F6CEEC2A22175C3F00844FB6 /* PrimaryButton.swift in Sources */,
+				F6B764C6220D97FE00033C29 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,14 +390,6 @@
 				F6FAB59021D4C4F9005190EA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F6FAB59421D4C4FB005190EA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6FAB59521D4C4FB005190EA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -456,8 +515,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BV32TNEZ63;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,7 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.phobrary.PhotoUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -474,8 +538,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BV32TNEZ63;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoUploader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,7 +553,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.phobrary.PhotoUploader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

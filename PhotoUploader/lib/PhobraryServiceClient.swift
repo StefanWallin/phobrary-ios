@@ -62,7 +62,8 @@ class PhobraryServiceClient: NSObject {
                 200 ... 299 ~= statusCode else
             {
                 failure(statusCode, data, response, error)
-                print("Invalid statusCode")
+                let jsonString = String(data: data!, encoding: .utf8)
+                print("Invalid statusCode(\(statusCode)): \(jsonString ?? "") ")
                 return
             }
             success(urlresponse.statusCode, data, response, error)
